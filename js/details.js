@@ -1,6 +1,7 @@
 // javascript for details.html
 const id = new URLSearchParams(window.location.search).get('id');
 const container = document.querySelector('.details');
+const deletBtn = document.querySelector('.btn-delete');
 
 const renderDetails = async () => {
   const res = await fetch(`http://localhost:8000/posts/${id}`);
@@ -13,5 +14,13 @@ const renderDetails = async () => {
   `;
   container.innerHTML = template;
 };
+
+deletBtn.addEventListener('click', async (e) => {
+  const res = await fetch(`http://localhost:8000/posts/${id}`, {
+    method: 'DELETE',
+  });
+
+  window.location.replace('/');
+});
 
 window.addEventListener('DOMContentLoaded', () => renderDetails());
