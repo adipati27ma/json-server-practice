@@ -9,6 +9,6 @@ Run `index.html` using live-server extension of Visual Studio Code or similar ap
 
 ## JSON-SERVER
 
-### Run JSON Server for dojo-blog (on localhost)
+### Run JSON Server (on localhost)
 
 `npx json-server --watch data/db.json --port 8000`
