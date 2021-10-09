@@ -11,4 +11,5 @@ Run `index.html` using live-server extension of Visual Studio Code or similar ap
 
 ### Run JSON Server (on localhost)
 
+Just simply run this command below on terminal :<br>
 `npx json-server --watch data/db.json --port 8000`
